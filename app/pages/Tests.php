@@ -3,28 +3,7 @@
 <?php
 
 if(isset($_POST['atualizar_questao'])){
-  echo "Questão: " . $Questao = $_POST['questao'];
-  echo "<br>Conteudo da pergunta: " . $ConteudoPergunta = $_POST['conteudo_pergunta'];
-  echo "<br>" . $QueryUpdateQuestao = "UPDATE questoes_provas SET pergunta_prova = '$ConteudoPergunta' WHERE id_prova = $Questao";
-  $ExeQrUpdateQuestao = mysql_query($QueryUpdateQuestao);
-
-  // Update da Resposta Correta
-   echo "Questão: " . $Questao = $_POST['questao'];
-   echo "<br>Resposta Correta: " . $RespostaCoreta = $_POST['resposta_correta'];
-   echo "<br><br>" . $QueryUpdateRespostaCorreta = "UPDATE respostas_corretas SET resposta = '$RespostaCoreta' WHERE id = $Questao";
-   echo "<br>";
-  $ExeQrUpdateRespostaCorreta = mysql_query($QueryUpdateRespostaCorreta);
-
-  if($ExeQrUpdateRespostaCorreta){
-    ?>
-    Resposta atuaizada <br>
-    <b>Resposta correta: </b> <?php echo $RespostaCoreta;?><br>
-    <?php
-  }else{
-    ?>
-    Erro: <b><?php echo mysql_error()?></b>
-    <?php
-  }
+  include_once 'parts/modal/ModalQuestaoAtualizada.php';
 }
 
   $QueryBuscarAulas = "SELECT * FROM aulas";
