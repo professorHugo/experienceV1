@@ -12,7 +12,7 @@ while($ResBuscarQuestoes = mysql_fetch_assoc($ExeQrBuscarQuestoesProvas)){
   ?>
   <div class="form-group col-md-12">
     <h3>Questão<?php echo $ResBuscarQuestoes['id_prova'].":</b><br> " ;echo $ResBuscarQuestoes['pergunta_prova']?></h3>
-    <!-- <h4><?php echo $ResBuscarQuestoes['id_prova']?></h4> -->
+    <h4><?php echo $ResBuscarQuestoes['modulo_prova']?></h4>
     <label class="col-md-3 text-justify" style="font-weight: 100;border:1px solid #ddd;min-height:100px">
       <input type="radio" name="<?php echo $ResBuscarQuestoes['modulo_prova']?>" value="1">
         <?php
