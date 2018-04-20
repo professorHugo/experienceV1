@@ -9,3 +9,5 @@ git push -u origin master
 19/04/18 19h24m - "Provas concluídas para apresentar respostas aleatórias em cada questão para os alunos. Próxima etapa, fazer a resposta ser enviada para o banco de dados e fazer update na table de usuarios com a nota da prova do aluno, e impedir do mesmo fazer a prova novamente"
 
 19/04/2018 20h29m - "Edição das perguntas atualizadas, adicionado modal para confirmação de update na pergunta, atualizado a página de provas"
+
+20/04/2018 14h55m - "Ajuste de atualização de permissão do usuário"
