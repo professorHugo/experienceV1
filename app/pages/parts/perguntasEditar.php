@@ -1,4 +1,4 @@
-<?php
+  <?php
 
   $QueryBuscarQuestoesProvas = "SELECT * FROM questoes_provas WHERE modulo_prova = $AulaProva";
   $ExeQrBuscarQuestoesProvas = mysql_query($QueryBuscarQuestoesProvas);
@@ -41,6 +41,8 @@
             ?>
             <label for="RespostaErrada<?php echo $ReturnRespErradas['id']?>">Resposta errada</label>
             <input type="text" name="RespostaErrada<?php echo $ReturnRespErradas['id']?>" id="RespostaErrada<?php echo $ReturnRespErradas['id']?>" value="<?php echo $ReturnRespErradas['resposta']?>">
+
+            <input type="hidden" name="RespostaErradaid" value="<?php echo $ReturnRespErradas['id']?>">
             <?php
           }
           ?>
