@@ -11,3 +11,5 @@ git push -u origin master
 19/04/2018 20h29m - "Edição das perguntas atualizadas, adicionado modal para confirmação de update na pergunta, atualizado a página de provas"
 
 20/04/2018 14h55m - "Ajuste de atualização de permissão do usuário"
+
+20/04/2018 15h53 - "Banco de dados em backup"
