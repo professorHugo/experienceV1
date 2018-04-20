@@ -1,4 +1,5 @@
 <?php
+// Adicionar ao Laptop
 require_once 'cnf/config.php';
 session_start();
 if (isset($_SESSION['Login'])) {
