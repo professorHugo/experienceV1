@@ -1,8 +1,9 @@
 <h3>Avaliações e Provas</h3>
 
 <?php
-// Adicionado ao projeto
+
 if(isset($_POST['atualizar_questao'])){
+  // Caso seja atualizado a questão, incluir o modal e programação para update
   include_once 'parts/modal/ModalQuestaoAtualizada.php';
 }
 

@@ -27,6 +27,7 @@
                   echo "<br>";
                   echo "<br>";
                   $ExeQrUpdateRespostaCorreta = mysql_query($QueryUpdateRespostaCorreta);
+                  
                   ?>
                 </div>
                 <div class="clearfix"></div>
