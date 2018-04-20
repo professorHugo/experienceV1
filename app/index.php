@@ -1,6 +1,5 @@
 <?php
-// Adicionando commit
-// Adicionado ao Pc da escola
+
 require_once '../cnf/config.php';
 session_start();
 //session_destroy();
