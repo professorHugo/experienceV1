@@ -6,6 +6,7 @@ $NomeLogado = $_SESSION['Login']['nome'];
 $Matricula = $_SESSION['Login']['matricula'];
 $Senha = $_SESSION['Login']['senha'];
 $PermLogado = $_SESSION['Login']['permissao'];
+
 if ($PermLogado == 2) {
     $PermLogado = "Administrador";
 } else {
