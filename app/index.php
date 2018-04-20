@@ -1,26 +1,13 @@
 <?php
+// Adicionando commit
 require_once '../cnf/config.php';
 session_start();
 //session_destroy();
- $NomeLogado = $_SESSION['Login']['nome'];
-  "<br>";
-  $Matricula = $_SESSION['Login']['matricula'];
-  "<br>";
-  $Senha = $_SESSION['Login']['senha'];
-  "<br>";
-  $PermLogado = $_SESSION['Login']['permissao'];
-  "<br>";
-  $QueryUpdatePermissao = "SELECT * FROM usuarios WHERE matricula = '$Matricula'";
-  "<br>";
-$ExeQrUpdatePermissao = mysql_query($QueryUpdatePermissao);
-if($ExeQrUpdatePermissao){
-    "Permissão Encontrada";
-  while($ReturnPerm = mysql_fetch_assoc($ExeQrUpdatePermissao)){
-      $_SESSION['Login']['permissao'] = $ReturnPerm['permissao'];
-      "<br>";
-      "Permissão atualizada";
-  }
-}
+$NomeLogado = $_SESSION['Login']['nome'];
+$Matricula = $_SESSION['Login']['matricula'];
+$Senha = $_SESSION['Login']['senha'];
+$PermLogado = $_SESSION['Login']['permissao'];
+
 if ($PermLogado == 2) {
     $PermLogado = "Administrador";
 } else {
@@ -166,7 +153,7 @@ if (isset($_SESSION['Login'])) {
                                     <label for="matricula_usuario" class="col-sm-3 control-label">Usuário:</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" disabled id="matricula_usuario" placeholder="<?php echo $_SESSION['Login']['nome']; ?>">
-                                        <input type="hidden" name="matricula_usuario" value="<?php   $_SESSION['Login']['id'] ?>">
+                                        <input type="hidden" name="matricula_usuario" value="<?php echo $_SESSION['Login']['id'] ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
