@@ -33,6 +33,19 @@
           </p>
         </div>
         <div class="col-md-12">
+          <h3>Respostas Erradas</h3>
+          <?php
+          echo $QueryBuscarREspostasErradas = "SELECT * FROM respostas_provas WHERE verdadeira = 0";
+          $ExeQrBuscarREspostasErradas = mysql_query($QueryBuscarREspostasErradas);
+          while($ReturnRespErradas = mysql_fetch_assoc($ExeQrBuscarREspostasErradas)){
+            ?>
+            <label for="RespostaErrada<?php echo $ReturnRespErradas['id']?>">Resposta errada</label>
+            <input type="text" name="" value="<?php echo $ReturnRespErradas['resposta']?>">
+            <?php
+          }
+          ?>
+        </div>
+        <div class="col-md-12">
           <input type="hidden" name="aula" value="<?php echo $AulaProva?>">
           <button type="submit" name="atualizar_questao" class="btn btn-success">Atualizar</button>
         </div>
