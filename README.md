@@ -13,3 +13,5 @@ git push -u origin master
 20/04/2018 14h55m - "Ajuste de atualização de permissão do usuário"
 
 20/04/2018 15h53 - "Banco de dados em backup"
+
+24/04/2018 - Up to Date
