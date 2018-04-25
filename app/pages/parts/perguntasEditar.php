@@ -14,7 +14,6 @@
           <input type="hidden" name="questao" value="<?php echo $ResBuscarQuestoes['id_prova']?>">
         </div>
       </div>
-      <input type="hidden" name="questao" value="<?php echo $ResBuscarQuestoes['id_prova']?>">
       <div class="form-group">
         <div class="col-md-12">
           <label for="resposta_correta">Resposta correta:</label>

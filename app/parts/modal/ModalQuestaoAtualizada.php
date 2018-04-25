@@ -1,6 +1,6 @@
 <!-- Modal Senha Inválida-->
 <div class="modal fade in text-muted" id="modalLoggedIn" tabindex="1" role="dialog" aria-labelledby="myModalLabel" style="display: block;">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog" role="document" style="width:90%">
         <div class="modal-content">
             <div class="modal-header">
 
@@ -22,15 +22,28 @@
                   // Update da Resposta Correta
                   "Questão: " . $Questao = $_POST['questao'];
                   echo "<br><b>Resposta Correta:</b> " . $RespostaCoreta = $_POST['resposta_correta'];
-                  "<br>" . $QueryUpdateRespostaCorreta = "UPDATE respostas_provas SET resposta = '$RespostaCoreta' WHERE id = $Questao";
+                  echo "<br>" . $QueryUpdateRespostaCorreta = "UPDATE respostas_provas SET resposta = '$RespostaCoreta' WHERE id = $Questao";
                   echo "<br>";
                   echo "<br>";
                   $ExeQrUpdateRespostaCorreta = mysql_query($QueryUpdateRespostaCorreta);
 
-                  // echo $RespostaErrada1 = 'RespostaErrada'.$_POST['RespostaErradaid'];
-                  print_r($_POST['RespostaErradaid']);
-                  echo $QueryRespostaErrada1 = "UPDATE";
-
+                  echo "<br>";
+                  $QuestaoEditar = $_POST['RespostaErradaid'];
+                  $i = 2;
+                  do{
+                    echo "Resposta errada: ";
+                    echo $QuestaoErrada = $_POST['RespostaErrada'.$i];
+                    echo "<br>";
+                    echo $QueryUpDateRespostaErrada = "UPDATE respostas_provas SET resposta = '$QuestaoErrada' WHERE id='$i'";
+                    echo "<br>";
+                    echo "<br>";
+                     $ExeQrUpDateRespostaErrada = mysql_query($QueryUpDateRespostaErrada);
+                    if($ExeQrUpDateRespostaErrada){
+                      echo "Respostas erradas também foram atualizadas";
+                    }
+                    $i++;
+                  }while($i <= $QuestaoEditar);
+                  //
                   ?>
                 </div>
                 <div class="clearfix"></div>

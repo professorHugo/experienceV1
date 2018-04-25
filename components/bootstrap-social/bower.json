@@ -1,14 +1,34 @@
 {
-  "name": "bootstrap-social",
-  "main": "bootstrap-social.css",
-  "licence": "MIT",
+  "name": "bootstrap",
+  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "keywords": [
+    "css",
+    "js",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "http://getbootstrap.com",
+  "license": "MIT",
+  "moduleType": "globals",
+  "main": [
+    "less/bootstrap.less",
+    "dist/js/bootstrap.js"
+  ],
   "ignore": [
-    "assets",
-    "index.html",
-    "LICENCE"
+    "/.*",
+    "_config.yml",
+    "CNAME",
+    "composer.json",
+    "CONTRIBUTING.md",
+    "docs",
+    "js/tests",
+    "test-infra"
   ],
   "dependencies": {
-    "bootstrap": "~3",
-    "font-awesome": "~4.2"
+    "jquery": "1.9.1 - 2"
   }
 }
